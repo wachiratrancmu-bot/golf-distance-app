@@ -2,38 +2,38 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#1B5E20">
-  <title>Golf Distance Manager</title>
+  
+  <meta name="mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <meta name="apple-mobile-web-app-title" content="GolfApp"> <title>Golf Distance Manager</title>
   <style>
     :root {
-      /* 🛠️ ปรับตัวเลขตรงนี้แค่จุดเดียวครับ! */
-      /* - ถ้าเปิดแล้วไม่มีแถบ Google เลย ให้ใส่ 0px */
-      /* - ถ้าเห็นแถบ Google 1 บรรทัด ให้ใส่ 28px */
-      /* - ถ้าเห็นแถบ Google 2 บรรทัด ให้ใส่ 46px */
-      --banner-height: 0px; 
+      --banner-height: 48px; 
     }
     
     body, html { 
       margin: 0; 
       padding: 0; 
-      height: 100dvh; 
+      height: 100%; 
+      width: 100%;
       overflow: hidden; 
       background-color: #1B5E20; 
     }
     
     .iframe-container {
       position: absolute;
+      /* ปรับให้ขยับขึ้นไปซ่อน Banner เหมือนเดิม */
       top: calc(-1 * var(--banner-height)); 
       left: 0;
       width: 100%;
-      height: calc(100dvh + var(--banner-height)); 
+      height: calc(100% + var(--banner-height)); 
     }
     
     iframe { 
       width: 100%; 
       height: 100%; 
       border: none; 
+      display: block; 
     }
   </style>
 </head>
